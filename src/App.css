@@ -1,22 +1,135 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+    height: 40vmin;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #09d3ac;
+    color: #09d3ac;
+}
+
+.mine:hover {
+
+}
+
+.mine {
+    display: inline-block;
+    border: solid 1px black;
+    width: 30px;
+    height: 30px;
+    color: black;
+    background-color: #773434;
+}
+
+p {
+    margin: 0;
+    height: 30px;
+}
+
+.red {
+    background-color: red;
+}
+
+.open:not(.red) {
+    background-color: #171717;
+}
+
+.open::after {
+    content: attr(data-mine);
+    position: absolute;
+    margin-left: -7px;
+}
+
+.guess::after {
+    content: "\003F";
+    position: absolute;
+    margin-left: -5px;
+    color: white;
+    font-weight: bold;
+}
+
+.flag::after {
+    content: '\2690';
+    position: absolute;
+    margin-left: -10px;
+    color: white;
+    font-weight: bold;
+}
+
+.bomb::after {
+    content: '*';
+    position: absolute;
+    margin-left: -3px;
+    font-weight: bold;
+}
+
+/*[data-mine="1"].open {*/
+/*background-color: lightgreen;*/
+/*}*/
+
+/*[data-mine="2"].open {*/
+/*background-color: lightyellow;*/
+/*}*/
+
+/*[data-mine="3"].open {*/
+/*background-color: lightsalmon;*/
+/*}*/
+
+/*[data-mine="4"].open {*/
+/*background-color: orange;*/
+/*}*/
+
+/*[data-mine="5"].open {*/
+/*background-color: lightpink;*/
+/*}*/
+
+/*[data-mine="5"].open {*/
+/*background-color: darkorange;*/
+/*}*/
+
+
+[data-mine="1"].open {
+    color: blue;
+}
+
+[data-mine="2"] {
+    color: green;
+}
+
+[data-mine="3"] {
+    color: red;
+}
+
+[data-mine="4"] {
+    color: purple;
+}
+
+[data-mine="5"] {
+    color: maroon;
+}
+
+
+[data-mine="6"] {
+    color: turquoise;
+}
+
+[data-mine="7"] {
+    color: black;
+}
+
+[data-mine="8"] {
+    color: gray;
 }
